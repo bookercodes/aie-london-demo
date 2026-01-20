@@ -3,7 +3,7 @@ import { z } from "zod";
 import Exa from "exa-js";
 
 export const searchWebTool = createTool({
-  id: "exa-search",
+  id: "search-web-tool",
   description:
     "Search the web with Exa and return summarized results for a query.",
   inputSchema: z.object({

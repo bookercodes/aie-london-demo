@@ -7,21 +7,13 @@ import {
   CloudExporter,
   SensitiveDataFilter,
 } from "@mastra/observability";
-import { intentClarifierAgent } from "./agents/intent-clarifier-agent";
-import { researchPlannerAgent } from "./agents/research-planner-agent";
-import { searchResultEvaluatorAgent } from "./agents/search-result-evaluator-agent";
-import { answererAgent } from "./agents/answerer-agent";
 import { deepSearchAgent } from "./agents/deep-search-agent";
 import { deepSearch } from "./workflows/deep-search-workflow";
-import { searchWebTool } from "./tools/exa-search-tool";
+import { searchWebTool } from "./tools/search-web-tool";
 
 export const mastra = new Mastra({
   workflows: { deepSearch },
   agents: {
-    intentClarifierAgent,
-    researchPlannerAgent,
-    searchResultEvaluatorAgent,
-    answererAgent,
     deepSearchAgent,
   },
   tools: {
@@ -30,7 +22,7 @@ export const mastra = new Mastra({
   storage: new LibSQLStore({
     id: "mastra-storage",
     // stores observability, scores, ... into memory storage, if it needs to persist, change to file:../mastra.db
-    url: ":memory:",
+    url: "file:../mastra.db",
   }),
   logger: new PinoLogger({
     name: "Mastra",
