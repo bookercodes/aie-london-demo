@@ -9,6 +9,7 @@ const currentDate = new Date().toLocaleDateString("en-US", {
 export const searchResultEvaluatorAgent = new Agent({
   id: "search-result-evaluator",
   name: "Search Result Evaluator Agent",
+  description: "Judges if search results are sufficient and identifies gaps.",
   model: "openai/gpt-5.2",
   instructions: `Today's date is ${currentDate}.
 

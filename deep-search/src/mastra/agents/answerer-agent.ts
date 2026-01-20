@@ -3,6 +3,7 @@ import { Agent } from "@mastra/core/agent";
 export const answererAgent = new Agent({
   id: "answerer-agent",
   name: "Answerer Agent",
+  description: "Synthesizes search results into a structured answer.",
   model: "openai/gpt-5.2",
   instructions: `You are a helpful AI assistant that answers questions based on the information gathered from web searches and crawled content.
 

@@ -5,6 +5,7 @@ const currentDate = new Date().toLocaleDateString('en-US', { year: 'numeric', mo
 export const intentClarifierAgent = new Agent({
   id: "intent-clarifier-agent",
   name: "Intent Clarifier Agent",
+  description: "Generates concise clarifying questions to refine user intent.",
   model: "openai/gpt-5-mini",
   instructions: `Today's date is ${currentDate}.
 

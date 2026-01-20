@@ -11,7 +11,9 @@ import { intentClarifierAgent } from "./agents/intent-clarifier-agent";
 import { researchPlannerAgent } from "./agents/research-planner-agent";
 import { searchResultEvaluatorAgent } from "./agents/search-result-evaluator-agent";
 import { answererAgent } from "./agents/answerer-agent";
+import { deepSearchAgent } from "./agents/deep-search-agent";
 import { deepSearch } from "./workflows/deep-search-workflow";
+import { searchWebTool } from "./tools/exa-search-tool";
 
 export const mastra = new Mastra({
   workflows: { deepSearch },
@@ -20,6 +22,10 @@ export const mastra = new Mastra({
     researchPlannerAgent,
     searchResultEvaluatorAgent,
     answererAgent,
+    deepSearchAgent,
+  },
+  tools: {
+    searchWebTool,
   },
   storage: new LibSQLStore({
     id: "mastra-storage",

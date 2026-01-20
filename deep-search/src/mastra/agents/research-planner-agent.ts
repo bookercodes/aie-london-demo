@@ -5,6 +5,7 @@ const currentDate = new Date().toLocaleDateString('en-US', { year: 'numeric', mo
 export const researchPlannerAgent = new Agent({
    id: "research-planner",
    name: "Research Planner Agent",
+   description: "Plans exploratory or gap-filling search queries.",
    model: "openai/gpt-5.2",
    instructions: `Today's date is ${currentDate}.
 
