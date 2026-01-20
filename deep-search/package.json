@@ -1,0 +1,35 @@
+{
+  "name": "deep-search",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "mastra dev",
+    "build": "mastra build",
+    "start": "mastra start"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "packageManager": "pnpm@10.23.0",
+  "type": "module",
+  "engines": {
+    "node": ">=22.13.0"
+  },
+  "dependencies": {
+    "@mastra/core": "1.0.0-beta.24",
+    "@mastra/evals": "1.0.0-beta.5",
+    "@mastra/libsql": "1.0.0-beta.12",
+    "@mastra/loggers": "1.0.0-beta.4",
+    "@mastra/memory": "1.0.0-beta.14",
+    "@mastra/observability": "1.0.0-beta.13",
+    "exa-js": "^2.0.12",
+    "zod": "^4.3.5"
+  },
+  "devDependencies": {
+    "@types/node": "^25.0.9",
+    "mastra": "1.0.0-beta.16",
+    "typescript": "^5.9.3"
+  }
+}
