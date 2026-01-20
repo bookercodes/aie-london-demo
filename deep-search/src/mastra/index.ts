@@ -7,11 +7,6 @@ import {
   CloudExporter,
   SensitiveDataFilter,
 } from "@mastra/observability";
-import {
-  toolCallAppropriatenessScorer,
-  completenessScorer,
-  translationScorer,
-} from "./scorers/weather-scorer";
 import { intentClarifierAgent } from "./agents/intent-clarifier-agent";
 import { researchPlannerAgent } from "./agents/research-planner-agent";
 import { searchResultEvaluatorAgent } from "./agents/search-result-evaluator-agent";
@@ -25,11 +20,6 @@ export const mastra = new Mastra({
     researchPlannerAgent,
     searchResultEvaluatorAgent,
     answererAgent,
-  },
-  scorers: {
-    toolCallAppropriatenessScorer,
-    completenessScorer,
-    translationScorer,
   },
   storage: new LibSQLStore({
     id: "mastra-storage",
